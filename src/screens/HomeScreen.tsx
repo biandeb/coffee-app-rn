@@ -4,6 +4,7 @@ import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 import { useStore } from '../store/store';
 import {COLORS} from '../theme/theme';
+import HeaderBar from '../components/HeaderBar';
 
 const getCategoriesFromData = (data: any) => {
     let temp: any = {};
@@ -53,7 +54,7 @@ const getCategoriesFromData = (data: any) => {
         <ScrollView 
         showsVerticalScrollIndicator={false} 
         contentContainerStyle={styles.ScrollViewFlex}>
-            {/* app header */}
+          <HeaderBar />
         </ScrollView>
     </View>;
   };
