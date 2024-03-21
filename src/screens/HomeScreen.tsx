@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native'
-import CustomIcon from '../components/CustomIcon';
+
 const HomeScreen = () => {
   return (
     <View>

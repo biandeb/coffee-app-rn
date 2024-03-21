@@ -1,15 +1,15 @@
 import React from 'react';
 
+import Icon from 'react-native-vector-icons/Ionicons';
 import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../screens/HomeScreen';
 import CartScreen from '../screens/CartScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import OrderHistoryScreen from '../screens/OrderHistoryScreen';
 import { COLORS } from '../theme/theme';
-// import { BlurView } from '@react-native-community/blur';
+import { BlurView } from '@react-native-community/blur';
 
 const Tab = createBottomTabNavigator();
 
@@ -20,9 +20,8 @@ const TabNavigator = () => {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBarStyle,
-        // tabBarBackground: () => (
-            // <BlurView overlayColor='' blurAmount={15} style={styles.BlurViewStyles} />
-        // )
+        // tabBarBackground: () => <BlurView blurType="light" style={styles.blurView} />
+        
         }}>
         <Tab.Screen name='Home' component={HomeScreen}
         options={{
@@ -85,13 +84,13 @@ const styles = StyleSheet.create({
         elevation: 0,
         borderTopColor: 'transparent',
     },
-    // BlurViewStyles: {
-    //     position: 'absolute',
-    //     top: 0,
-    //     bottom: 0,
-    //     left: 0,
-    //     right: 0,
-    // },
+    blurView: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+    },
 });
 
-export default TabNavigator
+export default TabNavigator;
