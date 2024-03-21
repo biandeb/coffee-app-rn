@@ -1,11 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, View } from 'react-native'
+
+import { COLORS } from '../theme/theme';
+
 const FavoritesScreen = () => {
-  return (
-    <View>
-      <Text>FavoritesScreen</Text>
-    </View>
-  )
-}
-const styles = StyleSheet.create({})
+  return <View style={styles.ScreenContainer}>
+        <StatusBar />
+    </View>;
+  };
+
+  const styles = StyleSheet.create({
+    ScreenContainer: {
+        flex: 1,
+        backgroundColor: COLORS.primaryBlackHex,
+    }
+  })
 
 export default FavoritesScreen

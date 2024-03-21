@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
-import { useStore } from '../store/store';
+import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+
+import { useStore } from '../store/store';
 import {COLORS} from '../theme/theme';
 
 const getCategoriesFromData = (data: any) => {
@@ -49,6 +50,11 @@ const getCategoriesFromData = (data: any) => {
 
     return <View style={styles.ScreenContainer}>
         <StatusBar />
+        <ScrollView 
+        showsVerticalScrollIndicator={false} 
+        contentContainerStyle={styles.ScrollViewFlex}>
+            {/* app header */}
+        </ScrollView>
     </View>;
   };
 
@@ -56,6 +62,9 @@ const getCategoriesFromData = (data: any) => {
     ScreenContainer: {
         flex: 1,
         backgroundColor: COLORS.primaryBlackHex,
+    },
+    ScrollViewFlex: {
+        flexGrow: 1,
     }
   })
 
